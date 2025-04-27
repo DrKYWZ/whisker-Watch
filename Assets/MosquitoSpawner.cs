@@ -21,7 +21,6 @@ public class MosquitoSpawner : MonoBehaviour
     private bool isGameOver = false; // Flag to check if the game is over
     private bool isWaitingForRestart = false;
 
-
     
     void Start()
     {
