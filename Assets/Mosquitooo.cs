@@ -5,6 +5,7 @@ public class Mosquitooo : MonoBehaviour
     public float speed = 5f; 
     public float waveFrequency = 1f; // Frequency of the wave motion
     public float waveMagnitude = 0.5f; // Magnitude of the wave motion
+    public GameObject clickParticle;
 
     private Transform target; // Target transform for the mosquito to move towards
     private Vector2 moveDirection; // Direction of movement for the mosquito
@@ -30,5 +31,13 @@ public class Mosquitooo : MonoBehaviour
         Vector3 movement = direction + (Vector3)perpedicular * waveMotion; // Combine direction with wave motion
         transform.Translate(movement * speed * Time.deltaTime); // Move the mosquito towards the target position
     }
+
+    void OnMouseDown()
+    {
+        isClicked = true; // Set the clicked flag to true when the mosquito is clicked
+        Destroy(gameObject); // Destroy the mosquito
+        Debug.Log("Mosquito licked!"); // Log a message to the console
+    }
+
 
 }
