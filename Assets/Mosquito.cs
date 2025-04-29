@@ -7,6 +7,7 @@ public class Mosquito : MonoBehaviour
     public float speed = 5f; 
     public float waveFrequency = 1f; // Frequency of the wave motion
     public float waveMagnitude = 0.5f; // Magnitude of the wave motion
+    public GameObject clickParticle;
 
 
     private Transform target; // Target transform for the mosquito to move towards

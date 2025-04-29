@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5071828305576931486}
   - component: {fileID: 4240058177916667159}
   - component: {fileID: 976669220822056919}
+  - component: {fileID: 1921990688201682666}
   m_Layer: 0
   m_Name: Mosquito
   m_TagString: Untagged
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4071365426358527179}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cbe6a118025c864ea405b9b4cd17cbe, type: 3}
   m_Name: 
@@ -132,6 +133,7 @@ MonoBehaviour:
   speed: 3
   waveFrequency: 1
   waveMagnitude: 0.5
+  clickParticle: {fileID: 0}
 --- !u!61 &976669220822056919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,3 +180,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.52, y: 1.62}
   m_EdgeRadius: 0
+--- !u!114 &1921990688201682666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4071365426358527179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4d849d794571d4686526f3f964ee18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  waveFrequency: 1
+  waveMagnitude: 0.5

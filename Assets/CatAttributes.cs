@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class CatAttributes : MonoBehaviour
 {
-    public int maxHealth = 1; // Health of the cat
+    public int maxHealth = 5; // Health of the cat
     
     private int currentHealth;
 
