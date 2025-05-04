@@ -12,6 +12,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        GameManager.instance.StartGame(); // Call the StartGame method from the GameManager instance
         mainMenuPanel.SetActive(false); // Hide the main menu panel
         gameView.SetActive(true); // Show the game view panel
     }
