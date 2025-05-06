@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dbbad06d65679b149bc3f2aeb1ff3977
+guid: 7e57d5764a9f1274694eb394ce425fda
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2359638610136418311
-    second: cat1_0
+      213: 1201215371591530281
+    second: Jendela-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cat1_0
+      name: Jendela-1_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 39
-        width: 152
-        height: 87
+        x: 0
+        y: 0
+        width: 145
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f7b58c9f21e04fd0800000000000000
-      internalID: -2359638610136418311
+      spriteID: 927b37224039ba010800000000000000
+      internalID: 1201215371591530281
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cat1_0: -2359638610136418311
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
