@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bingkai1_0: -6852939818576135277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

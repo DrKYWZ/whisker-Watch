@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Game_over14_0: -295148325642538973
+      Game_over14_1: 2285346284662902711
+      Game_over14_2: 771511367094856366
+      Game_over14_3: 4423709456252957931
+      Game_over14_4: -6924881859251362918
+      Game_over14_5: -1146695392620270936
+      Game_over14_6: -8631169756020816879
+      Game_over14_7: -3324561417392943977
+      Game_over14_8: 2059845352617270321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
