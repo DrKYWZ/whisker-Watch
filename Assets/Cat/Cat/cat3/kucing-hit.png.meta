@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kucing-hit_0: 376136310883867303
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mosquitoPrefabL: {fileID: 4071365426358527179, guid: 6a78881956d85064597f4ce1d1f6cf85, type: 3}
-  mosquitoPrefabR: {fileID: 4071365426358527179, guid: 607dcf1bd5792c54b859078129407247, type: 3}
+  mosquitoPrefabR: {fileID: 4071365426358527179, guid: 6a78881956d85064597f4ce1d1f6cf85, type: 3}
   mosquitoSigma: {fileID: 162229669379763719, guid: 0f87db1b938b0e24da50f056fc28fb91, type: 3}
   leftSpawnPoint: {fileID: 9887905}
   rightSpawnPoint: {fileID: 1440811405}
