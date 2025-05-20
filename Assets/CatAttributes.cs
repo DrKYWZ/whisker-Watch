@@ -5,6 +5,9 @@ public class CatAttributes : MonoBehaviour
     public int maxHealth = 1; // Health of the cat
     
     private int currentHealth;
+    public Sprite catMangap;
+    private SpriteRenderer spriteRenderer;
+    private Sprite originalSprite;
 
     public GameObject gameOverPanel; // Reference to the game over panel
     
@@ -13,6 +16,8 @@ public class CatAttributes : MonoBehaviour
     {
         currentHealth = maxHealth;
         gameOverPanel.SetActive(false); // Hide the game over panel at the start
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void TakeDamage(int damage)
