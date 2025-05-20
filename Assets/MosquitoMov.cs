@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MosquitoMov : MonoBehaviour
 {
+    private MosquitoSpawner mosquitoSpawner;
     public float speed = 5f; 
     public float waveFrequency = 1f; // Frequency of the wave motion
     public float waveMagnitude = 0.5f; // Magnitude of the wave motion
@@ -14,6 +15,8 @@ public class MosquitoMov : MonoBehaviour
 
 void Start()
 {
+    mosquitoSpawner = GameObject.Find("MosquitoSpawner").GetComponent<MosquitoSpawner>();
+    speed = speed * mosquitoSpawner.difficultySpeed;
     target = GameObject.FindGameObjectWithTag("Cat").transform; // Find the cat object in the scene
     Vector2 dir = target.position - transform.position; // Calculate the direction to the target
     moveDirection = dir.normalized; // Normalize the direction vector

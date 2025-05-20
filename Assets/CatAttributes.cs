@@ -1,42 +1,69 @@
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
 public class CatAttributes : MonoBehaviour
 {
-    public int maxHealth = 1; // Health of the cat
-    
+    public int maxHealth = 5;
     private int currentHealth;
-    public Sprite catMangap;
-    private SpriteRenderer spriteRenderer;
-    private Sprite originalSprite;
 
-    public GameObject gameOverPanel; // Reference to the game over panel
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Animator animator;
+    public GameObject gameOverPanel;
+    public List<Sprite> healthImages;
+    public Image healthContainer;
+
     void Start()
     {
         currentHealth = maxHealth;
-        gameOverPanel.SetActive(false); // Hide the game over panel at the start
+        gameOverPanel.SetActive(false);
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        animator.Play("Cat Animation");
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Reduce the current health by the damage taken
-        Debug.Log("Cat Health: " + currentHealth); // Log the current health to the console
+        currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        Debug.Log("Cat Health: " + currentHealth);
+
+        StartCoroutine(PlayHitAnimation());
 
         if (currentHealth <= 0)
         {
-            GameOver(); // Call the GameOver method if health is zero or less
+            GameOver();
+        }
+        UpdateHealthUI();
+    }
+
+    IEnumerator PlayHitAnimation()
+    {
+        animator.enabled = false;
+        yield return null;
+
+        animator.enabled = true;
+        animator.Play("Cat Hit");
+
+        yield return new WaitForSeconds(1f);
+
+        if (currentHealth > 0)
+        {
+            animator.Play("Cat Animation");
         }
     }
 
     void GameOver()
     {
-        gameOverPanel.SetActive(true); // Show the game over panel
-        Time.timeScale = 0; // Pause the game
-        Debug.Log("Game Over!"); // Log a message to the console
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
+        Debug.Log("Game Over!");
     }
 
-
+    void UpdateHealthUI()
+    {
+        int index = Mathf.Clamp(maxHealth - currentHealth, 0, healthImages.Count - 1);
+        healthContainer.sprite = healthImages[index];
+    }
 }

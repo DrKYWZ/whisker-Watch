@@ -14,7 +14,7 @@ public class MosquitoSpawner : MonoBehaviour
     public float waveDuration = 5f;// Start is called once before the first execution of Update after the MonoBehaviour is created
     public int waveNumber = 5; // Number of waves to spawn
     public TextMeshProUGUI waveCountText; // UI text to display the wave count
-
+    public float difficultySpeed = 1;
 
 
     private bool spawning = false;
@@ -30,7 +30,7 @@ public class MosquitoSpawner : MonoBehaviour
 
     void Update()
     {
-        waveCountText.text = "Wave: " + waveNumber.ToString(); // Update the UI text with the current wave number
+        waveCountText.text = waveNumber.ToString(); // Update the UI text with the current wave number
 
         if (isGameOver && !isWaitingForRestart) // Check if the game is over and not waiting for restart
         {
@@ -62,6 +62,8 @@ public class MosquitoSpawner : MonoBehaviour
 
         spawning = false; // Set the spawning flag to false
         waveNumber++;
+        difficultySpeed+= 0.5f;
+        
 
         yield return new WaitForSeconds(1f); // Wait for 1 second before starting the next wave
         StartCoroutine(StartWaves()); // Start the coroutine to spawn waves of mosquitoes again

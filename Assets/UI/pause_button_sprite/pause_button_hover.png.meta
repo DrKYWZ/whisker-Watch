@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pause_button_hover_0: -1924495619874965001
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
